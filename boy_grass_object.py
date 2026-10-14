@@ -49,6 +49,7 @@ class Balloon:
         self.size = random.randint(41,70)
         self.direction = 1
         #1 = up -1 = down
+        self.count = 0
 
     def update(self):
         if(self.y >= 610 - self.size and not self.is_at_Top):
