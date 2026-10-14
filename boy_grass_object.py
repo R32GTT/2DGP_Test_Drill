@@ -48,14 +48,16 @@ class Balloon:
         self.is_at_Top = False
         self.size = random.randint(41,70)
         self.direction = 0
-        #0 = up 1 = down
+        #0 = up -1 = down
 
     def update(self):
-        if(self.y >= 600 - self.size):
+        if(self.y >= 600 - self.size and not self.is_at_Top):
             self.is_at_Top = True
         if(not self.is_at_Top and self.direction == 0):
             self.y += self.speed
-        
+        if(self.is_at_Top and self.direction == 0):
+            self.direction = -1
+            self.y += (self.speed * self.direction)
 
 
     def draw(self):
