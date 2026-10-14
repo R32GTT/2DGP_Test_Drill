@@ -53,11 +53,19 @@ class Balloon:
     def update(self):
         if(self.y >= 600 - self.size and not self.is_at_Top):
             self.is_at_Top = True
+
         if(not self.is_at_Top and self.direction == 1):
             self.y += (self.speed * self.direction)
+
         if(self.is_at_Top and self.direction == 1):
             self.direction = -1
             self.y += (self.speed * self.direction)
+            return
+
+        if(self.is_at_Top and self.direction == -1):
+            self.direction = 1
+            self.y += (self.speed * self.direction)
+            return
 
 
     def draw(self):
