@@ -47,12 +47,16 @@ class Balloon:
         self.speed = 10
         self.is_at_Top = False
         self.size = random.randint(41,70)
-        self.direction = 1
+        self.direction = 0
         #0 = up 1 = down
 
     def update(self):
+        if(self.y >= 600 - self.size):
+            self.is_at_Top = True
         if(not self.is_at_Top and self.direction == 0):
             self.y += self.speed
+        
+
 
     def draw(self):
         self.image.clip_draw(0,0,41,41,self.x,self.y,self.size,self.size)
