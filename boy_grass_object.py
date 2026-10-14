@@ -40,7 +40,12 @@ class Zombie:
         frame_height = self.image.h
         self.image.clip_draw(self.frame*frame_width,0,frame_width,frame_height,self.x,self.y,frame_width//2,frame_height//2)
 
-class Ballon:
+class Balloon:
+    def __init__(self):
+        self.x,self.y
+        self.image
+        self.speed
+        self.is_at_Top
     pass
 
 def handle_events():
