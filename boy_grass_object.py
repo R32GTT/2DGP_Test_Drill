@@ -42,7 +42,7 @@ class Zombie:
 
 class Balloon:
     def __init__(self):
-        self.x,self.y = random.randint(41,700),30
+        self.x,self.y = random.randint(41,750),30
         self.image = load_image('ball41x41.png')
         self.speed = random.randint(10,20)
         self.is_at_Top = False
@@ -51,7 +51,7 @@ class Balloon:
         #1 = up -1 = down
 
     def update(self):
-        if(self.y >= 600 - self.size and not self.is_at_Top):
+        if(self.y >= 610 - self.size and not self.is_at_Top):
             self.is_at_Top = True
 
         if(not self.is_at_Top and self.direction == 1):
