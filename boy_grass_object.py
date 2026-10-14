@@ -44,18 +44,18 @@ class Balloon:
     def __init__(self):
         self.x,self.y = random.randint(41,700),30
         self.image = load_image('ball41x41.png')
-        self.speed = 10
+        self.speed = random.randint(10,20)
         self.is_at_Top = False
         self.size = random.randint(41,70)
-        self.direction = 0
-        #0 = up -1 = down
+        self.direction = 1
+        #1 = up -1 = down
 
     def update(self):
         if(self.y >= 600 - self.size and not self.is_at_Top):
             self.is_at_Top = True
-        if(not self.is_at_Top and self.direction == 0):
-            self.y += self.speed
-        if(self.is_at_Top and self.direction == 0):
+        if(not self.is_at_Top and self.direction == 1):
+            self.y += (self.speed * self.direction)
+        if(self.is_at_Top and self.direction == 1):
             self.direction = -1
             self.y += (self.speed * self.direction)
 
