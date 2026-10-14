@@ -77,7 +77,8 @@ def reset_world():
     zombie = Zombie()
     world.append(zombie)
 
-    
+    balloon = Balloon()
+    world.append(balloon)
 
     running = True
 
