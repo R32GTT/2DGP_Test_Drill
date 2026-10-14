@@ -42,10 +42,10 @@ class Zombie:
 
 class Balloon:
     def __init__(self):
-        self.x,self.y
-        self.image
-        self.speed
-        self.is_at_Top
+        self.x,self.y = 400,400
+        self.image = load_image('ball41x41.png')
+        self.speed = 0
+        self.is_at_Top = False
 
     def update(self):
         pass
