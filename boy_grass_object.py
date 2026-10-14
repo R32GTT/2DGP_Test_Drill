@@ -46,6 +46,9 @@ class Balloon:
         self.image = load_image('ball41x41.png')
         self.speed = 0
         self.is_at_Top = False
+        self.size = random.randint(41,100)
+        self.direction = 0
+        #0 = up 1 = down
 
     def update(self):
         pass
