@@ -46,7 +46,12 @@ class Balloon:
         self.image
         self.speed
         self.is_at_Top
-    pass
+
+    def update(self):
+        pass
+
+    def draw(self):
+        pass
 
 def handle_events():
     global running
